@@ -390,4 +390,4 @@ end
 
 iron_secondary = {{"iron-gear-wheel", 2}, {"iron-stick", 0.5}, {"electronic-circuit", 1}}
 copper_secondary = {{"copper-cable", 0.5}, {"electronic-circuit", 1.5}}
-Add_Advanced("both-recycle-", "both-recycling", "iron-plate", iron_secondary, "copper-plate", copper_secondary, "__Recycling__/graphics/recycle-sign-s.png")
+Add_Advanced("both-recycle-", "both-recycling", "iron-plate", iron_secondary, "copper-plate", copper_secondary, "__RecycleEverything__/graphics/recycle-sign-s.png")

@@ -3,7 +3,7 @@ data:extend({
     type = "technology",
     name = "bjnick-metal-recycling",
     icon_size = 128,
-    icon = "__Recycling__/graphics/metal-recycling.png",
+    icon = "__RecycleEverything__/graphics/metal-recycling.png",
     effects =
     {
       {
@@ -32,7 +32,7 @@ data:extend({
     type = "technology",
     name = "bjnick-metal-recycling-2",
     icon_size = 128,
-    icon = "__Recycling__/graphics/metal-recycling.png",
+    icon = "__RecycleEverything__/graphics/metal-recycling.png",
     effects =
     {
       {

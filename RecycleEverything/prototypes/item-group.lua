@@ -4,7 +4,7 @@ data:extend(
     type = "item-group",
     name = "recycling",
     order = "z",
-    icon = "__Recycling__/graphics/item-group.png",
+    icon = "__RecycleEverything__/graphics/item-group.png",
     icon_size = 64,
   },
   {
