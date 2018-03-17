@@ -1,0 +1,11 @@
+{
+    "name": "Recycling",
+    "version": "0.2.0",
+    "title": "Recycling",
+    "author": "BJNick",
+    "contact": "",
+    "homepage": "",
+    "factorio_version": "0.16",
+    "dependencies": ["base >= 0.16"],
+    "description": "Allows you to smelt metals from the end-products such as wires, tools and machines."
+}
