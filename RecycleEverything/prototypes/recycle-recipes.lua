@@ -3,7 +3,7 @@ smelting_base_energy = 5
 advanced_smelting_base_energy = 4
 
 function Count_Ingredients(elem, ing, sec)
-  elcount = 0
+  local elcount = 0
   if elem.name then
     if elem.name == ing then
       elcount = elcount + 1
@@ -29,7 +29,7 @@ function Count_Ingredients(elem, ing, sec)
 end
 
 function Find_Item(item_name)
-  searched_item = data.raw["item"][item_name]
+  local searched_item = data.raw["item"][item_name]
   if data.raw["item"][item_name] then
     searched_item = data.raw["item"][item_name]
   elseif data.raw["item-with-entity-data"][item_name] then
@@ -65,7 +65,7 @@ function Find_Item(item_name)
 end
 
 function Find_Item_Icon(item_name)
-  searched_item = Find_Item(item_name)
+  local searched_item = Find_Item(item_name)
   if searched_item.icon then
     n_icon = searched_item.icon;
   elseif searched_item.icons then
@@ -166,10 +166,12 @@ function Add_All(prefix, recipe_category, recipe_subgroup, ingredient, secondary
   end
 end
 
-iron_secondary = {{"iron-gear-wheel", 2}, {"iron-stick", 0.5}, {"electronic-circuit", 1}}
+iron_secondary = {{"iron-gear-wheel", 2}, {"iron-stick", 0.5}, {"electronic-circuit", 1}, {"pipe", 1}, --[[{"steel-plate", 5},]] {"advanced-circuit", 2}, {"processing-unit", 24}}
+
+copper_secondary = {{"copper-cable", 0.5}, {"electronic-circuit", 1.5}, {"advanced-circuit", 5}, {"processing-unit", 40}}
+
 Add_All("iron-recycle-", "iron-recycling", "iron-recycling", "iron-plate", iron_secondary, Find_Item_Icon("iron-plate"))
 
-copper_secondary = {{"copper-cable", 0.5}, {"electronic-circuit", 1.5}}
 Add_All("copper-recycle-", "copper-recycling", "copper-recycling", "copper-plate", copper_secondary, Find_Item_Icon("copper-plate"))
 
 function Add_Advanced(prefix, recipe_category, ingredient1, secondary1, ingredient2, secondary2, recipe_icon)
@@ -388,6 +390,4 @@ function Add_Advanced(prefix, recipe_category, ingredient1, secondary1, ingredie
   end
 end
 
-iron_secondary = {{"iron-gear-wheel", 2}, {"iron-stick", 0.5}, {"electronic-circuit", 1}}
-copper_secondary = {{"copper-cable", 0.5}, {"electronic-circuit", 1.5}}
 Add_Advanced("both-recycle-", "both-recycling", "iron-plate", iron_secondary, "copper-plate", copper_secondary, "__RecycleEverything__/graphics/recycle-sign-s.png")

@@ -18,7 +18,7 @@ data:extend({
     prerequisites = {"advanced-material-processing"},
     unit =
     {
-      count = 50,
+      count = 75,
       ingredients =
       {
         {"science-pack-1", 1},
@@ -48,6 +48,7 @@ data:extend({
       {
         {"science-pack-1", 1},
         {"science-pack-2", 1},
+        {"science-pack-3", 1},
       },
       time = 30
     },
