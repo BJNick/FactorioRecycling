@@ -1,5 +1,7 @@
 --data.lua
 
+require("scripts.recipe-functions")
+
 require("prototypes.categories")
 require("prototypes.item-group")
 

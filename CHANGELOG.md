@@ -1,7 +1,15 @@
 # Changelog
 All changes to this mod will be documented in this file.
 
-## [Unreleased]
+## [0.2.3] - 2018-03-18
+### Added
+- Full support for Marathon (Expensive mode)
+
+### Changed
+- Complete remake of the mod structure
+
+### Fixed
+- Some recipes weren't returning all the raw resources
 
 ## [0.2.2] - 2018-03-17
 ### Changed
