@@ -95,9 +95,6 @@ function Find_Item(item_name)
     	searched_item = v[item_name]
 	end
   end
-  if not searched_item then
-	error("No item-type found for "..item_name)
-  end
   return searched_item
 end
 

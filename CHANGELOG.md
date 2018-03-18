@@ -1,6 +1,18 @@
 # Changelog
 All changes to this mod will be documented in this file.
 
+## [0.2.6] - 2018-03-18
+### Added
+- Electric recycling furnaces
+- Technology for Electric recycling
+
+### Changed
+- Recipe for x10 stacks now requires research
+- Recipe for x10 stacks no longer can be intermediate
+
+### Fixed
+- Recipes with multiple results now are not calculated
+
 ## [0.2.5] - 2018-03-18
 ### Added
 - x10 stacked iron and copper items

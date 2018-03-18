@@ -10,7 +10,7 @@ function Add_All(prefix, recipe_category, recipe_subgroup, ingredient, ing_prefi
     if (not n.category) or n.category == "crafting" or n.category == "advanced-crafting" then
       local count = PrintNil(Total_Raw(n.name, 1, {ingredient}, true)[1])
       local exp_count = PrintNil(Total_Raw(n.name, 1, {ingredient}, false)[1])
-      if count > 0 then
+      if count > 0 and Find_Item(n.name) then
         count = count * settings.startup["bjnick-recycling-efficiency"].value
         local ingredient_count, count = Calculate_Best_Ingredient_Count(count)
         exp_count = exp_count * settings.startup["bjnick-recycling-efficiency"].value
@@ -89,7 +89,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
       local exp_count1 = PrintNil(both_counts[1])
       local exp_count2 = PrintNil(both_counts[2])
     
-      if count1 > 0 or count2 > 0 then
+      if (count1 > 0 or count2 > 0) and Find_Item(n.name) then
 
         count1 = count1 * settings.startup["bjnick-recycling-efficiency"].value
         count2 = count2 * settings.startup["bjnick-recycling-efficiency"].value

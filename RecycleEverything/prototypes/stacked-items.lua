@@ -12,7 +12,7 @@ data:extend(
     icon_size = 32,
     flags = {"goes-to-main-inventory"},
     subgroup = "raw-material",
-    order = "c-d",
+    order = "d-c",
     stack_size = 65535
 },
 {
@@ -27,7 +27,7 @@ data:extend(
     icon_size = 32,
     flags = {"goes-to-main-inventory"},
     subgroup = "raw-material",
-    order = "c-d",
+    order = "d-c",
     stack_size = 65535
 },
 }
