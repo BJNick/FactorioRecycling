@@ -1,6 +1,17 @@
 # Changelog
 All changes to this mod will be documented in this file.
 
+## [0.2.5] - 2018-03-18
+### Added
+- x10 stacked iron and copper items
+- You can unpack the stack
+
+### Changed
+- If an item is made of 100+ plates, recycling furnaces will return x10 plate stacks
+
+### Fixed
+- The maximum 100 of plates at output (now it's 655,350 plates!)
+
 ## [0.2.4] - 2018-03-18
 ### Changed
 - Search for item icons improved
