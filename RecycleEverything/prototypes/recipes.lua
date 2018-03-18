@@ -23,6 +23,24 @@ data:extend(
     ingredients = {{"steel-furnace", 1}, {"copper-plate", 8}, {"iron-plate", 8}},
     result = "both-recycling-furnace",
     energy_required = 3,
-  }
+  },
+  {
+    type = "recipe",
+    name = "unpack-iron-plates",
+    enabled = true,
+    ingredients = {{"recycled-stack-iron-plate", 1}},
+    result = "iron-plate",
+    order = "d-c",
+    result_count = 10,
+  },
+  {
+    type = "recipe",
+    name = "unpack-copper-plates",
+    enabled = true,
+    ingredients = {{"recycled-stack-copper-plate", 1}},
+    result = "copper-plate",
+    order = "d-c",
+    result_count = 10,
+  },
 }
 )
