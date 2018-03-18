@@ -1,6 +1,10 @@
 # Changelog
 All changes to this mod will be documented in this file.
 
+## [0.2.4] - 2018-03-18
+### Changed
+- Search for item icons improved
+
 ## [0.2.3] - 2018-03-18
 ### Added
 - Full support for Marathon (Expensive mode)

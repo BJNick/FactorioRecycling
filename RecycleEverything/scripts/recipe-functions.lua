@@ -85,41 +85,18 @@ function PrintNil(obj)
 		return 0
 	end
 end
---local raw = Total_Raw("construction-robot", 1, {"iron-plate", "copper-plate", "plastic-bar"}, true)
---error("Everything is awesome! i-"..PrintNil(raw[1]).." c-"..PrintNil(raw[2]).." p-"..PrintNil(raw[3]))
+
+NOT_ITEM_CATEGORIES = {"recipe", "technology"}
 
 function Find_Item(item_name)
-  local searched_item = data.raw["item"][item_name]
-  if data.raw["item"][item_name] then
-    searched_item = data.raw["item"][item_name]
-  elseif data.raw["item-with-entity-data"][item_name] then
-    searched_item = data.raw["item-with-entity-data"][item_name]
-  elseif data.raw["tool"][item_name] then
-    searched_item = data.raw["tool"][item_name]
-  elseif data.raw["gun"][item_name] then
-    searched_item = data.raw["gun"][item_name]
-  elseif data.raw["ammo"][item_name] then
-    searched_item = data.raw["ammo"][item_name]
-  elseif data.raw["armor"][item_name] then
-    searched_item = data.raw["armor"][item_name]
-  elseif data.raw["armor"][item_name] then
-    searched_item = data.raw["armor"][item_name]
-  elseif data.raw["mining-tool"][item_name] then
-    searched_item = data.raw["mining-tool"][item_name]
-  elseif data.raw["module"][item_name] then
-    searched_item = data.raw["module"][item_name]
-  elseif data.raw["mining-tool"][item_name] then
-    searched_item = data.raw["mining-tool"][item_name]
-  elseif data.raw["capsule"][item_name] then
-    searched_item = data.raw["capsule"][item_name]
-  elseif data.raw["mining-tool"][item_name] then
-    searched_item = data.raw["mining-tool"][item_name]
-  elseif data.raw["repair-tool"][item_name] then
-    searched_item = data.raw["repair-tool"][item_name]
-  elseif data.raw["rail-planner"][item_name] then
-    searched_item = data.raw["rail-planner"][item_name]
-  else
-    error("No item-type found for "..item_name)
+  local searched_item = nil
+  for i, v in pairs(data.raw) do
+  	if not Table_Has(NOT_ITEM_CATEGORIES, i) and v[item_name] and (v[item_name].icon or v[item_name].icons) then
+    	searched_item = v[item_name]
+	end
+  end
+  if not searched_item then
+	error("No item-type found for "..item_name)
   end
   return searched_item
 end
