@@ -1,3 +1,3 @@
 
 -- Make recipes
-require("prototypes.recycle-recipes")
+require("prototypes.recipes.recycle-recipes")

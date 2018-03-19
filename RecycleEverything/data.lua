@@ -1,11 +1,12 @@
 --data.lua
 
-require("prototypes.categories")
-require("prototypes.item-group")
+require("prototypes.categories.categories")
+require("prototypes.categories.item-group")
 
-require("prototypes.items")
-require("prototypes.stacked-items")
-require("prototypes.entities")
+require("prototypes.items.items")
+require("prototypes.items.stacked-items")
 
-require("prototypes.recipes")
-require("prototypes.technology")
+require("prototypes.entities.entities")
+
+require("prototypes.recipes.recipes")
+require("prototypes.technologies.technology")

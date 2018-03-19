@@ -381,3 +381,5 @@ Add_Recycler("both-recycling-furnace", "both-recycling", {r=0.8,g=1,b=0.8,a=1}, 
 Add_E_Recycler("electric-iron-recycling-furnace", "iron-recycling", {r=0.8,g=0.8,b=1,a=1}, 1)
 Add_E_Recycler("electric-copper-recycling-furnace", "copper-recycling", {r=1,g=0.75,b=0.75,a=1}, 1)
 Add_E_Recycler("electric-both-recycling-furnace", "both-recycling", {r=0.8,g=1,b=0.8,a=1}, 2)
+
+--Add_Recycler("burning-furnace", "smelting", {r=0.6,g=0.6,b=0.6,a=1}, 1)
