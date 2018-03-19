@@ -12,5 +12,11 @@ data:extend({
 	    name = "bjnick-toggle-recipes",
 	    setting_type = "startup",
 	    default_value = true
+	},
+	{
+	    type = "bool-setting",
+	    name = "bjnick-toggle-burn-recipes",
+	    setting_type = "startup",
+	    default_value = true
 	}
 })

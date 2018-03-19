@@ -100,6 +100,9 @@ end
 
 function Find_Item_Icon(item_name)
   local searched_item = Find_Item(item_name)
+  if not searched_item then
+  	error("No item for "..PrintNil(item_name))
+  end
   if searched_item.icon then
     n_icon = searched_item.icon;
   elseif searched_item.icons then

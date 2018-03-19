@@ -25,5 +25,11 @@ data:extend(
     group = "recycling",
     order = "c"
   },
+  {
+    type = "item-subgroup",
+    name = "burning",
+    group = "recycling",
+    order = "d"
+  },
 }
 )

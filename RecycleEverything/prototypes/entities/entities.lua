@@ -78,7 +78,6 @@ function Add_Recycler(recycler_name, recycler_crafting_group, recycler_tint, rec
           },
           {
             filename = "__base__/graphics/entity/steel-furnace/steel-furnace-shadow.png",
-            tint=recycler_tint,
             priority = "high",
             width = 139,
             height = 43,
@@ -87,7 +86,6 @@ function Add_Recycler(recycler_name, recycler_crafting_group, recycler_tint, rec
             shift = util.by_pixel(39.5, 11.5),
             hr_version = {
               filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-shadow.png",
-              tint=recycler_tint,
               priority = "high",
               width = 277,
               height = 85,
@@ -109,7 +107,6 @@ function Add_Recycler(recycler_name, recycler_crafting_group, recycler_tint, rec
           animation =
           {
             filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
-            tint=recycler_tint,
             priority = "high",
             line_length = 8,
             width = 29,
@@ -120,7 +117,6 @@ function Add_Recycler(recycler_name, recycler_crafting_group, recycler_tint, rec
             shift = util.by_pixel(-0.5, 6),
             hr_version = {
               filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-fire.png",
-              tint=recycler_tint,
               priority = "high",
               line_length = 8,
               width = 57,
@@ -143,7 +139,6 @@ function Add_Recycler(recycler_name, recycler_crafting_group, recycler_tint, rec
           animation =
           {
             filename = "__base__/graphics/entity/steel-furnace/steel-furnace-glow.png",
-            tint=recycler_tint,
             priority = "high",
             width = 60,
             height = 43,
@@ -161,7 +156,6 @@ function Add_Recycler(recycler_name, recycler_crafting_group, recycler_tint, rec
           animation =
           {
             filename = "__base__/graphics/entity/steel-furnace/steel-furnace-working.png",
-            tint=recycler_tint,
             priority = "high",
             line_length = 8,
             width = 64,
@@ -173,7 +167,6 @@ function Add_Recycler(recycler_name, recycler_crafting_group, recycler_tint, rec
             blend_mode = "additive",
             hr_version = {
               filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-working.png",
-              tint=recycler_tint,
               priority = "high",
               line_length = 8,
               width = 130,
@@ -271,7 +264,6 @@ function Add_E_Recycler(recycler_name, recycler_crafting_group, recycler_tint, r
         },
         {
           filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
-          tint=recycler_tint,
           priority = "high",
           width = 129,
           height = 100,
@@ -280,7 +272,6 @@ function Add_E_Recycler(recycler_name, recycler_crafting_group, recycler_tint, r
           draw_as_shadow = true,
           hr_version = {
             filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-shadow.png",
-            tint=recycler_tint,
             priority = "high",
             width = 227,
             height = 171,
@@ -298,7 +289,6 @@ function Add_E_Recycler(recycler_name, recycler_crafting_group, recycler_tint, r
           animation =
           {
             filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-            tint=recycler_tint,
             priority = "high",
             width = 25,
             height = 15,
@@ -307,7 +297,6 @@ function Add_E_Recycler(recycler_name, recycler_crafting_group, recycler_tint, r
             shift = {0.015625, 0.890625},
             hr_version = {
               filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
-              tint=recycler_tint,
               priority = "high",
               width = 60,
               height = 56,
@@ -381,5 +370,3 @@ Add_Recycler("both-recycling-furnace", "both-recycling", {r=0.8,g=1,b=0.8,a=1}, 
 Add_E_Recycler("electric-iron-recycling-furnace", "iron-recycling", {r=0.8,g=0.8,b=1,a=1}, 1)
 Add_E_Recycler("electric-copper-recycling-furnace", "copper-recycling", {r=1,g=0.75,b=0.75,a=1}, 1)
 Add_E_Recycler("electric-both-recycling-furnace", "both-recycling", {r=0.8,g=1,b=0.8,a=1}, 2)
-
---Add_Recycler("burning-furnace", "smelting", {r=0.6,g=0.6,b=0.6,a=1}, 1)

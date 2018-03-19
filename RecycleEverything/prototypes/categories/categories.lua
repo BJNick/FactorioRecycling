@@ -19,5 +19,9 @@ data:extend(
   {
     type = "recipe-category",
     name = "both-recycling"
+  },
+  {
+    type = "recipe-category",
+    name = "recycle-destroying"
   }
 })

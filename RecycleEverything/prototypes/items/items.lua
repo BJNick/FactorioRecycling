@@ -97,6 +97,26 @@ data:extend(
    order = "d-c",
    place_result = "electric-both-recycling-furnace",
    stack_size = 50
-  }
+  },
+
+  -- BURNING
+
+
+  {
+   type = "item",
+   name = "burning-furnace",
+   icons = {
+      {
+         icon = "__base__/graphics/icons/steel-furnace.png",
+         tint={r=0.5,g=0.5,b=0.5,a=1},
+         icon_size = 32,
+      }
+   },
+   flags = {"goes-to-quickbar"},
+   subgroup = "smelting-machine",
+   order = "z",
+   place_result = "burning-furnace",
+   stack_size = 50
+  },
 }
 )
