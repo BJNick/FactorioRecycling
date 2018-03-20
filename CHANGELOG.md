@@ -1,6 +1,20 @@
 # Changelog
 All changes to this mod will be documented in this file.
 
+## [0.2.7] - 2018-03-19
+### Added
+- Burning furnaces that can destroy any item
+- Electric burning furnaces
+- 'Item burning 1-2' technologies
+
+### Changed
+- Recycle furnaces now have a separate item subgroup
+- Cost of some technologies
+- Names and descriptions are changed a bit
+
+### Fixed
+- Color of fire doesn't change with furnace color
+
 ## [0.2.6] - 2018-03-18
 ### Added
 - Electric recycling furnaces
