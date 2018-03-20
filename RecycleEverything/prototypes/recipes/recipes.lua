@@ -1,5 +1,8 @@
 data:extend(
 {
+
+  -- ENTITIES
+
   {
     type = "recipe",
     name = "iron-recycling-furnace",
@@ -20,7 +23,7 @@ data:extend(
     type = "recipe",
     name = "both-recycling-furnace",
     enabled = false,
-    ingredients = {{"steel-furnace", 1}, {"copper-plate", 8}, {"iron-plate", 8}},
+    ingredients = {{"steel-furnace", 1}, {"copper-plate", 10}, {"iron-plate", 10}},
     result = "both-recycling-furnace",
     energy_required = 3,
   },
@@ -48,6 +51,26 @@ data:extend(
     result = "electric-both-recycling-furnace",
     energy_required = 3,
   },
+
+  {
+    type = "recipe",
+    name = "burning-furnace",
+    enabled = false,
+    ingredients = {{"steel-furnace", 1}, {"coal", 10}},
+    result = "burning-furnace",
+    energy_required = 3,
+  },
+  {
+    type = "recipe",
+    name = "electric-burning-furnace",
+    enabled = false,
+    ingredients = {{"electric-furnace", 1}, {"coal", 20}},
+    result = "electric-burning-furnace",
+    energy_required = 3,
+  },
+
+  -- ITEMS
+
   {
     type = "recipe",
     name = "unpack-iron-plates",

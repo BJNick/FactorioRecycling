@@ -11,8 +11,8 @@ data:extend(
       }
    },
    flags = {"goes-to-quickbar"},
-   subgroup = "smelting-machine",
-   order = "c-b",
+   subgroup = "recycling-machine",
+   order = "c",
    place_result = "iron-recycling-furnace",
    stack_size = 50
   },
@@ -27,8 +27,8 @@ data:extend(
       }
    },
    flags = {"goes-to-quickbar"},
-   subgroup = "smelting-machine",
-   order = "c-b",
+   subgroup = "recycling-machine",
+   order = "e",
    place_result = "copper-recycling-furnace",
    stack_size = 50
   },
@@ -43,8 +43,8 @@ data:extend(
       }
    },
    flags = {"goes-to-quickbar"},
-   subgroup = "smelting-machine",
-   order = "c-b",
+   subgroup = "recycling-machine",
+   order = "g",
    place_result = "both-recycling-furnace",
    stack_size = 50
   },
@@ -61,8 +61,8 @@ data:extend(
       }
    },
    flags = {"goes-to-quickbar"},
-   subgroup = "smelting-machine",
-   order = "d-c",
+   subgroup = "recycling-machine",
+   order = "d",
    place_result = "electric-iron-recycling-furnace",
    stack_size = 50
   },
@@ -77,8 +77,8 @@ data:extend(
       }
    },
    flags = {"goes-to-quickbar"},
-   subgroup = "smelting-machine",
-   order = "d-c",
+   subgroup = "recycling-machine",
+   order = "f",
    place_result = "electric-copper-recycling-furnace",
    stack_size = 50
   },
@@ -93,14 +93,13 @@ data:extend(
       }
    },
    flags = {"goes-to-quickbar"},
-   subgroup = "smelting-machine",
-   order = "d-c",
+   subgroup = "recycling-machine",
+   order = "h",
    place_result = "electric-both-recycling-furnace",
    stack_size = 50
   },
 
   -- BURNING
-
 
   {
    type = "item",
@@ -113,9 +112,26 @@ data:extend(
       }
    },
    flags = {"goes-to-quickbar"},
-   subgroup = "smelting-machine",
-   order = "z",
+   subgroup = "recycling-machine",
+   order = "a",
    place_result = "burning-furnace",
+   stack_size = 50
+  },
+
+  {
+   type = "item",
+   name = "electric-burning-furnace",
+   icons = {
+      {
+         icon = "__base__/graphics/icons/electric-furnace.png",
+         tint={r=0.5,g=0.5,b=0.5,a=1},
+         icon_size = 32,
+      }
+   },
+   flags = {"goes-to-quickbar"},
+   subgroup = "recycling-machine",
+   order = "b",
+   place_result = "electric-burning-furnace",
    stack_size = 50
   },
 }

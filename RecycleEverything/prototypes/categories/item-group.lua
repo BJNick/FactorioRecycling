@@ -31,5 +31,12 @@ data:extend(
     group = "recycling",
     order = "d"
   },
+
+  {
+    type = "item-subgroup",
+    name = "recycling-machine",
+    group = "production",
+    order = "d-a"
+  },
 }
 )

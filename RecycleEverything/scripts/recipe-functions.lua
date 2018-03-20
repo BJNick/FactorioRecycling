@@ -86,7 +86,8 @@ function PrintNil(obj)
 	end
 end
 
-NOT_ITEM_CATEGORIES = {"recipe", "technology"}
+-- Doesn't do anything but works...
+NOT_ITEM_CATEGORIES = {"recipe", "technology", "fluid"}
 
 function Find_Item(item_name)
   local searched_item = nil

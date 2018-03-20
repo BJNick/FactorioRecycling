@@ -69,6 +69,7 @@ function Add_All(prefix, recipe_category, recipe_subgroup, ingredient, ing_prefi
               energy_required = smelting_base_energy * (exp_count/4) * exp_energy,
             },
             subgroup = recipe_subgroup,
+            allow_as_intermediate = false,
             hidden = settings.startup["bjnick-toggle-recipes"].value
           }})
         end
@@ -184,6 +185,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
               energy_required = advanced_smelting_base_energy * ((exp_count1*exp_energy1+exp_count2*exp_energy2)/2/4),
             },
             subgroup = "both-recycling",
+            allow_as_intermediate = false,
             hidden = settings.startup["bjnick-toggle-recipes"].value
           }})
         elseif math.floor(count1) > 0 and math.floor(count2) == 0 then
@@ -214,6 +216,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
               energy_required = advanced_smelting_base_energy * ((exp_count1*exp_energy1+exp_count2*exp_energy2)/2/4),
             },
             subgroup = "both-recycling",
+            allow_as_intermediate = false,
             hidden = true
           }})
         elseif math.floor(count1) == 0 and math.floor(count2) > 0 then
@@ -245,6 +248,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
               energy_required = advanced_smelting_base_energy * ((exp_count1*exp_energy1+exp_count2*exp_energy2)/2/4),
             },
             subgroup = "both-recycling",
+            allow_as_intermediate = false,
             hidden = true
           }})
         end

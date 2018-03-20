@@ -1,4 +1,5 @@
 data:extend({
+
   {
     type = "technology",
     name = "bjnick-metal-recycling",
@@ -42,8 +43,9 @@ data:extend({
       },
       time = 30
     },
-    order = "c-c-b"
+    order = "c-c-a-b"
   },
+
   {
     type = "technology",
     name = "bjnick-metal-recycling-2",
@@ -68,7 +70,7 @@ data:extend({
       },
       time = 30
     },
-    order = "c-c-c"
+    order = "c-c-a-c"
   },
   {
     type = "technology",
@@ -102,7 +104,63 @@ data:extend({
       },
       time = 30
     },
-    order = "c-c-d"
+    order = "c-c-b-b"
   },
+
+
+
+  {
+    type = "technology",
+    name = "bjnick-item-burning",
+    icon_size = 128,
+    icon = "__RecycleEverything__/graphics/item-burning.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "burning-furnace"
+      },
+    },
+    prerequisites = {"advanced-material-processing"},
+    unit =
+    {
+      count = 75,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+      },
+      time = 30
+    },
+    order = "c-c-a-a"
+  },
+
+  {
+    type = "technology",
+    name = "bjnick-item-burning-2",
+    icon_size = 128,
+    icon = "__RecycleEverything__/graphics/item-burning.png",
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "electric-burning-furnace"
+      },
+    },
+    prerequisites = {"advanced-material-processing-2", "bjnick-item-burning"},
+    unit =
+    {
+      count = 100,
+      ingredients =
+      {
+        {"science-pack-1", 1},
+        {"science-pack-2", 1},
+        {"science-pack-3", 1},
+      },
+      time = 30
+    },
+    order = "c-c-b-a"
+  },
+
 }
 )
