@@ -7,7 +7,6 @@ data:extend(
 	icons = {
 	  {
 		icon = "__RecycleEverything__/graphics/shredder.png",
-		tint={r=1,g=0.8,b=0.8,a=1},
 		icon_size = 32,
 	  }
 	},
