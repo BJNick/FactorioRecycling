@@ -1,6 +1,23 @@
 # Changelog
 All changes to this mod will be documented in this file.
 
+## [0.3.0] - 2018-03-24
+### Added
+- Shredding machine
+- Recyclates
+- New recipes
+- Russian support
+
+### Changed
+- Now default efficiency of recycling furnaces is 75% yield
+- Efficiency of the shredding machine is 100%
+- Recipe for advanced recycling furnace
+- 'Burning furnace' is now 'Incineration furnace'
+- Technologies used for recycling
+
+### Removed
+- Electrical recycling furnaces, use shredding machines instead!
+
 ## [0.2.7] - 2018-03-19
 ### Added
 - Burning furnaces that can destroy any item
