@@ -3,6 +3,7 @@ require("scripts.recipe-functions")
 
 smelting_base_energy = 3.5 / 3.3
 advanced_smelting_base_energy = 3.5 / 3.3
+base_efficiency = 0.75
 max_getting_amount = 65535
 
 function Add_All(prefix, recipe_category, recipe_subgroup, ingredient, ing_prefix, recipe_icon)
@@ -11,9 +12,9 @@ function Add_All(prefix, recipe_category, recipe_subgroup, ingredient, ing_prefi
       local count = PrintNil(Total_Raw(n.name, 1, {ingredient}, true)[1])
       local exp_count = PrintNil(Total_Raw(n.name, 1, {ingredient}, false)[1])
       if count > 0 and Find_Item(n.name) and (n.result or (n.normal and n.normal.result)) then
-        count = count * settings.startup["bjnick-recycling-efficiency"].value
+        count = count * base_efficiency * settings.startup["bjnick-recycling-efficiency"].value
         local ingredient_count, count = Calculate_Best_Ingredient_Count(count)
-        exp_count = exp_count * settings.startup["bjnick-recycling-efficiency"].value
+        exp_count = exp_count * base_efficiency * settings.startup["bjnick-recycling-efficiency"].value
         local exp_ingredient_count, exp_count = Calculate_Best_Ingredient_Count(exp_count)
 
         local stack_size = data.raw["item"][ingredient].stack_size
@@ -92,16 +93,16 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
     
       if (count1 > 0 or count2 > 0) and Find_Item(n.name) and (n.result or (n.normal and n.normal.result)) then
 
-        count1 = count1 * settings.startup["bjnick-recycling-efficiency"].value
-        count2 = count2 * settings.startup["bjnick-recycling-efficiency"].value
+        count1 = count1 * settings.startup["bjnick-recycling-efficiency"].value * base_efficiency
+        count2 = count2 * settings.startup["bjnick-recycling-efficiency"].value * base_efficiency
         local ingredient_count_1 = Calculate_Best_Ingredient_Count(count1)
         local ingredient_count_2 = Calculate_Best_Ingredient_Count(count2)
         local ingredient_count = math.max(ingredient_count_1, ingredient_count_2)
         count1 = count1 * ingredient_count
         count2 = count2 * ingredient_count
 
-        exp_count1 = exp_count1 * settings.startup["bjnick-recycling-efficiency"].value
-        exp_count2 = exp_count2 * settings.startup["bjnick-recycling-efficiency"].value
+        exp_count1 = exp_count1 * settings.startup["bjnick-recycling-efficiency"].value * base_efficiency
+        exp_count2 = exp_count2 * settings.startup["bjnick-recycling-efficiency"].value * base_efficiency
         local exp_ingredient_count_1 = Calculate_Best_Ingredient_Count(exp_count1)
         local exp_ingredient_count_2 = Calculate_Best_Ingredient_Count(exp_count2)
         local exp_ingredient_count = math.max(exp_ingredient_count_1, exp_ingredient_count_2)

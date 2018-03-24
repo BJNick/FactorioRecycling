@@ -54,7 +54,7 @@ data:extend({
     type = "technology",
     name = "bjnick-metal-recycling-2",
     icon_size = 128,
-    icon = "__RecycleEverything__/graphics/metal-recycling.png",
+    icon = "__RecycleEverything__/graphics/material-recycling.png",
     effects =
     {
       {
