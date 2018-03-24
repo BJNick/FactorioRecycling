@@ -1,12 +1,34 @@
 
 function Table_Has(table, element)
-	local has = false;
+	local has = false
 	for i, v in ipairs(table) do
 		if v == element then
 			has = true
 		end
 	end
 	return has;
+end
+
+function Map(list, lfunction)
+  for i, v in ipairs(list) do
+    list[i] = lfunction(list[i], i)
+  end
+  return list
+end
+
+function deepcopy(orig)
+    local orig_type = type(orig)
+    local copy
+    if orig_type == 'table' then
+        copy = {}
+        for orig_key, orig_value in next, orig, nil do
+            copy[deepcopy(orig_key)] = deepcopy(orig_value)
+        end
+        setmetatable(copy, deepcopy(getmetatable(orig)))
+    else -- number, string, boolean, etc
+        copy = orig
+    end
+    return copy
 end
 
 -- ex. item_name="circuit", quantity=3, search_for={"iron_plate", "copper_plate"}
@@ -26,7 +48,9 @@ function Total_Raw(item_name, quantity, search_for, is_normal)
 
 		if not recipe or (recipe.category and recipe.category~="crafting" and recipe.category~="advanced-crafting") then
 			-- if it does not have a non-chemical recipe
-			return {}
+			local returns = deepcopy(search_for)
+			returns = Map(returns, function(v) return 0 end)
+			return returns
 		else
 			local ingredients = nil
 			if recipe.ingredients then
@@ -43,7 +67,8 @@ function Total_Raw(item_name, quantity, search_for, is_normal)
 			if recipe.result_count then
 				result_count = recipe.result_count
 			end
-			local returns = {}
+			local returns = deepcopy(search_for)
+			returns = Map(returns, function(v) return 0 end)
 			for i, v in ipairs(ingredients) do
 				if v[1] then
 					local found = false
@@ -128,4 +153,14 @@ function Calculate_Best_Ingredient_Count(count)
     return ingredient_count, count
 end
 
-
+function Calculate_Just_Ingredient_Count(count)
+	local ingredient_count = 1
+	if count < 2 and count ~= math.floor(count) and 2*count == math.floor(2*count) then
+  		ingredient_count = ingredient_count * 2
+    elseif count < 2 and count ~= math.floor(count) and 4*count == math.floor(4*count) then
+  		ingredient_count = ingredient_count * 4
+    elseif count < 2 and count ~= math.floor(count) and 8*count == math.floor(8*count) then
+      	ingredient_count = ingredient_count * 8
+    end
+    return ingredient_count
+end

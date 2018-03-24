@@ -13,4 +13,5 @@ require("prototypes.entities.burning-furnace")
 require("prototypes.entities.shredding-machine")
 
 require("prototypes.recipes.recipes")
+require("prototypes.recipes.smelting")
 require("prototypes.technologies.technology")

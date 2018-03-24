@@ -23,5 +23,9 @@ data:extend(
   {
     type = "recipe-category",
     name = "recycle-destroying"
+  },
+  {
+    type = "recipe-category",
+    name = "recycle-shredding"
   }
 })

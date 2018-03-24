@@ -365,18 +365,18 @@ data:extend(
 	  apparent_volume = 1.5,
 	},
 	crafting_speed = 1,
-	crafting_categories = {"recycle-destroying"},
+	crafting_categories = {"recycle-shredding"},
 	energy_source =
 	{
 	  type = "electric",
 	  usage_priority = "secondary-input",
-	  emissions = 0.04 / 2.5
+	  emissions = 0.0025
 	},
 	energy_usage = "350kW",
 	ingredient_count = 2,
 	module_specification =
 	{
-	  module_slots = 2
+	  module_slots = 3
 	},
 	allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 

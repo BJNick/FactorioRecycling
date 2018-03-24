@@ -31,6 +31,12 @@ data:extend(
     group = "recycling",
     order = "d"
   },
+  {
+    type = "item-subgroup",
+    name = "shredding",
+    group = "recycling",
+    order = "e"
+  },
 
   {
     type = "item-subgroup",
