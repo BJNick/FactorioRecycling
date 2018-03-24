@@ -380,7 +380,7 @@ data:extend(
 	},
 	allowed_effects = {"consumption", "speed", "productivity", "pollution"},
 
-	result_inventory_size = 5,
+	result_inventory_size = 4,
 	source_inventory_size = 1,
 
 	}

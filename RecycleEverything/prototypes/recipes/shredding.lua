@@ -4,24 +4,6 @@ require("scripts.recipe-functions")
 shredding_base_energy = 2
 max_getting_amount = 50000
 
-function Find_Max(list)
-  local max = 0
-  for i, v in pairs(list) do
-    if max < v then
-      max = v
-    end
-  end
-  return max
-end
-
-function Find_Sum(list)
-  local sum = 0
-  for i, v in pairs(list) do
-    sum = sum + v
-  end
-  return sum
-end
-
 function Add_Shredding(ingredients, recyclates, recipe_icon)
   for j,n in pairs(data.raw.recipe) do
     if (not n.category) or n.category == "crafting" or n.category == "advanced-crafting" then
@@ -85,12 +67,14 @@ function Add_Shredding(ingredients, recyclates, recipe_icon)
               ingredients = {{n.name, ingredient_count}},
               results = norm_results,
               energy_required = math.log(Find_Sum(counts) * shredding_base_energy),
+              allow_as_intermediate = false,
             },
             expensive =
             {
               ingredients = {{n.name, exp_ingredient_count}},
               results = exp_results,
               energy_required = math.log(Find_Sum(exp_counts) * shredding_base_energy),
+              allow_as_intermediate = false,
             },
             subgroup = "shredding",
             allow_as_intermediate = false,

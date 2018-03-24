@@ -1,8 +1,8 @@
 
 require("scripts.recipe-functions")
 
-smelting_base_energy = 5
-advanced_smelting_base_energy = 4
+smelting_base_energy = 3.5 / 3.3
+advanced_smelting_base_energy = 3.5 / 3.3
 max_getting_amount = 65535
 
 function Add_All(prefix, recipe_category, recipe_subgroup, ingredient, ing_prefix, recipe_icon)
@@ -59,14 +59,14 @@ function Add_All(prefix, recipe_category, recipe_subgroup, ingredient, ing_prefi
               ingredients = {{n.name, ingredient_count}},
               result = fin_ingredient,
               result_count = math.floor(count),
-              energy_required = smelting_base_energy * (count/4) * fin_energy,
+              energy_required = smelting_base_energy * count * fin_energy,
             },
             expensive =
             {
               ingredients = {{n.name, exp_ingredient_count}},
               result = exp_ingredient,
               result_count = math.floor(exp_count),
-              energy_required = smelting_base_energy * (exp_count/4) * exp_energy,
+              energy_required = smelting_base_energy * exp_count * exp_energy,
             },
             subgroup = recipe_subgroup,
             allow_as_intermediate = false,
@@ -174,7 +174,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
               results = {
                 {fin_ingredient1, math.floor(count1)},{fin_ingredient2, math.floor(count2)}
               },
-              energy_required = advanced_smelting_base_energy * ((count1*fin_energy1+count2*fin_energy2)/2/4),
+              energy_required = advanced_smelting_base_energy * (count1*fin_energy1+count2*fin_energy2),
             },
             expensive =
             {
@@ -182,7 +182,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
               results = {
                 {exp_ingredient1, math.floor(exp_count1)},{exp_ingredient2, math.floor(exp_count2)}
               },
-              energy_required = advanced_smelting_base_energy * ((exp_count1*exp_energy1+exp_count2*exp_energy2)/2/4),
+              energy_required = advanced_smelting_base_energy * (exp_count1*exp_energy1+exp_count2*exp_energy2),
             },
             subgroup = "both-recycling",
             allow_as_intermediate = false,
@@ -205,7 +205,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
               results = {
                 {fin_ingredient1, math.floor(count1)}
               },
-              energy_required = advanced_smelting_base_energy * ((count1*fin_energy1+count2*fin_energy2)/2/4),
+              energy_required = advanced_smelting_base_energy * (count1*fin_energy1+count2*fin_energy2),
             },
             expensive =
             {
@@ -213,7 +213,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
               results = {
                 {exp_ingredient1, math.floor(exp_count1)}
               },
-              energy_required = advanced_smelting_base_energy * ((exp_count1*exp_energy1+exp_count2*exp_energy2)/2/4),
+              energy_required = advanced_smelting_base_energy * (exp_count1*exp_energy1+exp_count2*exp_energy2),
             },
             subgroup = "both-recycling",
             allow_as_intermediate = false,
@@ -230,14 +230,14 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
               {icon = recipe_icon, scale= 0.6, shift = {8, 9}},
             },              
             icon_size = 32,
-            energy_required = advanced_smelting_base_energy * ((count1+count2)/2/4),
+            energy_required = advanced_smelting_base_energy * (count1+count2),
             normal =
             {
               ingredients = {{n.name, ingredient_count}},
               results = {
                 {fin_ingredient2, math.floor(count2)}
               },
-              energy_required = advanced_smelting_base_energy * ((count1*fin_energy1+count2*fin_energy2)/2/4),
+              energy_required = advanced_smelting_base_energy * (count1*fin_energy1+count2*fin_energy2),
             },
             expensive =
             {
@@ -245,7 +245,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
               results = {
                 {exp_ingredient2, math.floor(exp_count2)}
               },
-              energy_required = advanced_smelting_base_energy * ((exp_count1*exp_energy1+exp_count2*exp_energy2)/2/4),
+              energy_required = advanced_smelting_base_energy * (exp_count1*exp_energy1+exp_count2*exp_energy2),
             },
             subgroup = "both-recycling",
             allow_as_intermediate = false,

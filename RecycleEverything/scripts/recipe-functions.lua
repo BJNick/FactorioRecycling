@@ -164,3 +164,21 @@ function Calculate_Just_Ingredient_Count(count)
     end
     return ingredient_count
 end
+
+function Find_Max(list)
+  local max = 0
+  for i, v in pairs(list) do
+    if max < v then
+      max = v
+    end
+  end
+  return max
+end
+
+function Find_Sum(list)
+  local sum = 0
+  for i, v in pairs(list) do
+    sum = sum + v
+  end
+  return sum
+end

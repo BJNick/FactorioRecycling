@@ -23,7 +23,8 @@ data:extend(
     type = "recipe",
     name = "both-recycling-furnace",
     enabled = false,
-    ingredients = {{"steel-furnace", 1}, {"copper-plate", 10}, {"iron-plate", 10}},
+    ingredients = {{"iron-recycling-furnace", 1}, {"copper-recycling-furnace", 1}, {"steel-plate", 10}},
+    --ingredients = {{"steel-furnace", 1}, {"copper-plate", 10}, {"iron-plate", 10}}, -- Deprecated
     result = "both-recycling-furnace",
     energy_required = 3,
   },
@@ -34,6 +35,8 @@ data:extend(
     ingredients = {{"electric-furnace", 1}, {"iron-plate", 20}},
     result = "electric-iron-recycling-furnace",
     energy_required = 3,
+    -- Deprecated
+    hidden = true,
   },
   {
     type = "recipe",
@@ -42,6 +45,8 @@ data:extend(
     ingredients = {{"electric-furnace", 1}, {"copper-plate", 20}},
     result = "electric-copper-recycling-furnace",
     energy_required = 3,
+    -- Deprecated
+    hidden = true,
   },
   {
     type = "recipe",
@@ -50,6 +55,8 @@ data:extend(
     ingredients = {{"electric-furnace", 1}, {"copper-plate", 20}, {"iron-plate", 20}},
     result = "electric-both-recycling-furnace",
     energy_required = 3,
+    -- Deprecated
+    hidden = true,
   },
 
   {
@@ -66,6 +73,15 @@ data:extend(
     enabled = false,
     ingredients = {{"electric-furnace", 1}, {"coal", 20}},
     result = "electric-burning-furnace",
+    energy_required = 3,
+  },
+
+  {
+    type = "recipe",
+    name = "shredding-machine",
+    enabled = false,
+    ingredients = {{"assembling-machine-1", 1}, {"electronic-circuit", 3}, {"iron-gear-wheel", 15}},
+    result = "shredding-machine",
     energy_required = 3,
   },
 
@@ -100,6 +116,8 @@ data:extend(
     order = "d-c",
     result_count = 1,
     allow_as_intermediate = false,
+    -- Deprecated
+    hidden = true,
   },
   {
     type = "recipe",
@@ -110,6 +128,8 @@ data:extend(
     order = "d-c",
     result_count = 1,
     allow_as_intermediate = false,
+    -- Deprecated
+    hidden = true,
   },
 }
 )

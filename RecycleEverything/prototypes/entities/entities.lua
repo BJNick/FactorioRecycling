@@ -200,7 +200,7 @@ function Add_E_Recycler(recycler_name, recycler_crafting_group, recycler_tint, r
         }
       },
       flags = {"placeable-neutral", "placeable-player", "player-creation"},
-      minable = {mining_time = 1, result = recycler_name},
+      minable = {mining_time = 1, result = "electric-furnace"},
       max_health = 350,
       corpse = "big-remnants",
       dying_explosion = "medium-explosion",

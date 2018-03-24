@@ -7,7 +7,8 @@ data:extend(
     ingredients = {{"iron-recyclate", 1}},
     result = "iron-plate",
     category = "smelting",
-    energy_required = 3,
+    energy_required = 3 /1.5,
+	allow_as_intermediate = false,
     hidden = true,
   },
   {
@@ -17,7 +18,8 @@ data:extend(
     ingredients = {{"copper-recyclate", 1}},
     result = "copper-plate",
     category = "smelting",
-    energy_required = 3,
+    energy_required = 3 /1.5,
+	allow_as_intermediate = false,
     hidden = true,
   },
   {
@@ -27,7 +29,8 @@ data:extend(
     ingredients = {{"steel-recyclate", 1}},
     result = "steel-plate",
     category = "smelting",
-    energy_required = 17.5,
+    energy_required = 17.5 /1.5,
+	allow_as_intermediate = false,
     hidden = true,
   },
   {
@@ -37,7 +40,8 @@ data:extend(
     ingredients = {{"plastic-recyclate", 1}},
     result = "plastic-bar",
     category = "smelting",
-    energy_required = 2,
+    energy_required = 2 /1.5,
+	allow_as_intermediate = false,
     hidden = true,
   },
 }

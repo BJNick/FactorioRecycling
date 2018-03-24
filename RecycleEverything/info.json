@@ -1,11 +1,11 @@
 {
     "name": "RecycleEverything",
-    "version": "0.2.8",
+    "version": "0.3.0",
     "title": "Recycle Everything",
     "author": "BJNick",
     "contact": "",
     "homepage": "",
     "factorio_version": "0.16",
     "dependencies": ["base"],
-    "description": "Allows you to smelt metals from the end-products such as wires, tools and machines."
+    "description": "Allows you to smelt materials back from wires, tools and machines."
 }

@@ -17,20 +17,24 @@ data:extend({
       },
       {
         type = "unlock-recipe",
+        recipe = "both-recycling-furnace"
+      },
+      {
+        type = "unlock-recipe",
         recipe = "unpack-iron-plates"
       },
       {
         type = "unlock-recipe",
         recipe = "unpack-copper-plates"
       },
-      {
+      --[[{ -- Deprecated
         type = "unlock-recipe",
         recipe = "recycled-stack-iron-plate"
       },
       {
         type = "unlock-recipe",
         recipe = "recycled-stack-copper-plate"
-      },
+      },]]
     },
     prerequisites = {"advanced-material-processing"},
     unit =
@@ -55,13 +59,17 @@ data:extend({
     {
       {
         type = "unlock-recipe",
+        recipe = "shredding-machine"
+      },
+      --[[{ -- Deprecated
+        type = "unlock-recipe",
         recipe = "both-recycling-furnace"
-      }
+      }]]
     },
     prerequisites = {"bjnick-metal-recycling"},
     unit =
     {
-      count = 100,
+      count = 150,
       ingredients =
       {
         {"science-pack-1", 1},
@@ -72,7 +80,8 @@ data:extend({
     },
     order = "c-c-a-c"
   },
-  {
+
+  --[[{ -- Deprecated
     type = "technology",
     name = "bjnick-metal-recycling-3",
     icon_size = 128,
@@ -105,9 +114,7 @@ data:extend({
       time = 30
     },
     order = "c-c-b-b"
-  },
-
-
+  },]]
 
   {
     type = "technology",
