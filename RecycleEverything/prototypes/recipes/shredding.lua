@@ -30,12 +30,13 @@ function Add_Shredding(ingredients, recyclates, recipe_icon)
 
         if math.floor(Find_Max(counts)) > 0  then
 
-          local n_icon = nil
+          local item_name = nil
           if n.normal then
-            n_icon = Find_Item_Icon(n.normal.result)
+            item_name = n.normal.result
           else
-            n_icon = Find_Item_Icon(n.result)
+            item_name = n.result
           end
+          local n_icon = Find_Item_Icon(item_name)
 
           local norm_results = deepcopy(recyclates)
           norm_results = Map(norm_results, function(v,i) 
@@ -53,7 +54,7 @@ function Add_Shredding(ingredients, recyclates, recipe_icon)
 
           data:extend({{
             type = "recipe",
-            name = "shred-"..n.name,
+            name = "shred-"..item_name,
             localised_name = {"looped-name.shredding"},
             category = "recycle-shredding",
             icons =
@@ -64,14 +65,14 @@ function Add_Shredding(ingredients, recyclates, recipe_icon)
             icon_size = 32,
             normal =
             {
-              ingredients = {{n.name, ingredient_count}},
+              ingredients = {{item_name, ingredient_count}},
               results = norm_results,
               energy_required = math.log(Find_Sum(counts) * shredding_base_energy),
               allow_as_intermediate = false,
             },
             expensive =
             {
-              ingredients = {{n.name, exp_ingredient_count}},
+              ingredients = {{item_name, exp_ingredient_count}},
               results = exp_results,
               energy_required = math.log(Find_Sum(exp_counts) * shredding_base_energy),
               allow_as_intermediate = false,

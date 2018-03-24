@@ -39,15 +39,16 @@ function Add_All(prefix, recipe_category, recipe_subgroup, ingredient, ing_prefi
         exp_count = math.min(max_getting_amount, exp_count)
 
         if math.floor(count) > 0  then
-          local n_icon = nil
+          local item_name = nil
           if n.normal then
-            n_icon = Find_Item_Icon(n.normal.result)
+            item_name = n.normal.result
           else
-            n_icon = Find_Item_Icon(n.result)
+            item_name = n.result
           end
+          local n_icon = Find_Item_Icon(item_name)
           data:extend({{
             type = "recipe",
-            name = prefix..n.name,
+            name = prefix..item_name,
             category = recipe_category,
             icons =
             {
@@ -57,14 +58,14 @@ function Add_All(prefix, recipe_category, recipe_subgroup, ingredient, ing_prefi
             icon_size = 32,
             normal =
             {
-              ingredients = {{n.name, ingredient_count}},
+              ingredients = {{item_name, ingredient_count}},
               result = fin_ingredient,
               result_count = math.floor(count),
               energy_required = smelting_base_energy * count * fin_energy,
             },
             expensive =
             {
-              ingredients = {{n.name, exp_ingredient_count}},
+              ingredients = {{item_name, exp_ingredient_count}},
               result = exp_ingredient,
               result_count = math.floor(exp_count),
               energy_required = smelting_base_energy * exp_count * exp_energy,
@@ -151,16 +152,17 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
         count2 = math.min(max_getting_amount, count2)
         exp_count2 = math.min(max_getting_amount, exp_count2)
 
-        local n_icon = nil
+        local item_name = nil
         if n.normal then
-          n_icon = Find_Item_Icon(n.normal.result)
+          item_name = n.normal.result
         else
-          n_icon = Find_Item_Icon(n.result)
+          item_name = n.result
         end
+        local n_icon = Find_Item_Icon(item_name)
         if math.floor(count1) > 0 and math.floor(count2) > 0 then
           data:extend({{
             type = "recipe",
-            name = prefix..n.name,
+            name = prefix..item_name,
             localised_name = {"looped-name.recycling"},
             category = recipe_category,
             icons =
@@ -171,7 +173,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
             icon_size = 32,
             normal =
             {
-              ingredients = {{n.name, ingredient_count}},
+              ingredients = {{item_name, ingredient_count}},
               results = {
                 {fin_ingredient1, math.floor(count1)},{fin_ingredient2, math.floor(count2)}
               },
@@ -179,7 +181,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
             },
             expensive =
             {
-              ingredients = {{n.name, exp_ingredient_count}},
+              ingredients = {{item_name, exp_ingredient_count}},
               results = {
                 {exp_ingredient1, math.floor(exp_count1)},{exp_ingredient2, math.floor(exp_count2)}
               },
@@ -192,7 +194,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
         elseif math.floor(count1) > 0 and math.floor(count2) == 0 then
           data:extend({{
             type = "recipe",
-            name = prefix..n.name,
+            name = prefix..item_name,
             category = recipe_category,
             icons =
             {
@@ -202,7 +204,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
             icon_size = 32,
             normal =
             {
-              ingredients = {{n.name, ingredient_count}},
+              ingredients = {{item_name, ingredient_count}},
               results = {
                 {fin_ingredient1, math.floor(count1)}
               },
@@ -210,7 +212,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
             },
             expensive =
             {
-              ingredients = {{n.name, exp_ingredient_count}},
+              ingredients = {{item_name, exp_ingredient_count}},
               results = {
                 {exp_ingredient1, math.floor(exp_count1)}
               },
@@ -223,7 +225,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
         elseif math.floor(count1) == 0 and math.floor(count2) > 0 then
           data:extend({{
             type = "recipe",
-            name = prefix..n.name,
+            name = prefix..item_name,
             category = recipe_category,
             icons =
             {
@@ -234,7 +236,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
             energy_required = advanced_smelting_base_energy * (count1+count2),
             normal =
             {
-              ingredients = {{n.name, ingredient_count}},
+              ingredients = {{item_name, ingredient_count}},
               results = {
                 {fin_ingredient2, math.floor(count2)}
               },
@@ -242,7 +244,7 @@ function Add_Advanced(prefix, recipe_category, ingredient1, ingredient2, ing_pre
             },
             expensive =
             {
-              ingredients = {{n.name, exp_ingredient_count}},
+              ingredients = {{item_name, exp_ingredient_count}},
               results = {
                 {exp_ingredient2, math.floor(exp_count2)}
               },

@@ -1,6 +1,10 @@
 # Changelog
 All changes to this mod will be documented in this file.
 
+## [0.3.1] - 2018-03-24
+### Fixed
+- Crash when running with Bio Industries
+
 ## [0.3.0] - 2018-03-24
 ### Added
 - Shredding machine
